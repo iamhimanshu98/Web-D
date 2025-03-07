@@ -34,17 +34,17 @@
 //   console.log(i);
 // }
 
-a = 0;
-if (a == 0) {
-  console.log(a);
-} else if (a == 0) {
-  console.log(a++);
-} else {
-  console.log(a++);
-}
+// a = 0;
+// if (a == 0) {
+//   console.log(a);
+// } else if (a == 0) {
+//   console.log(a++);
+// } else {
+//   console.log(a++);
+// }
 
-object = [10, 20, 30, 40, 50];
+// object = [10, 20, 30, 40, 50];
 
-for (const element in object) {
-  console.log(object[element]);
-}
+// for (const element in object) {
+//   console.log(object[element]);
+// }

@@ -1,34 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
-    font-family: 'HelveticaNowDisplay';
-    src: url('fonts/HelveticaNowDisplay-Regular.woff2') format('woff2'),
-         url('fonts/HelveticaNowDisplay-Regular.woff') format('woff'),
-         url('fonts/HelveticaNowDisplay-Regular.ttf') format('truetype');
+  font-family: "HelveticaNowDisplay";
+  src: url("fonts/HelveticaNowDisplay-Regular.woff2") format("woff2"),
+    url("fonts/HelveticaNowDisplay-Regular.woff") format("woff"),
+    url("fonts/HelveticaNowDisplay-Regular.ttf") format("truetype");
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html, body{
-    font-family: 'HelveticaNowDisplay';
-    color: #fff;
-    background-color: #222;
+html,
+body {
+  font-family: "HelveticaNowDisplay";
+  color: #fff;
+  background-color: #222;
 }
-main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100vw;
-    height: 100vh;
-    font-size: 3rem;
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  font-size: 3rem;
 }
-h1{
-    font-weight: 900;
-    text-decoration: underline double;
-    line-height: 2;
+h1 {
+  font-weight: 900;
+  text-decoration: underline double;
+  line-height: 2;
 }
-h3{
-    font-weight: 100;
+h3 {
+  font-weight: 100;
+}
+
+.hind-regular {
+  font-family: "Hind", sans-serif;
+  font-weight: 400;
+}
+
+.hind-bold {
+  font-family: "Hind", sans-serif;
+  font-weight: 700;
 }
