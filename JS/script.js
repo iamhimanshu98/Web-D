@@ -237,25 +237,54 @@ switch (day) {
 //   }
 // });
 
-function uniqueCharacters(str) {
-  let charCount = {};
+// function uniqueCharacters(str) {
+//   let charCount = {};
 
-  for (let char of str) {
-    charCount[char] = (charCount[char] || 0) + 1;
-  }
+//   for (let char of str) {
+//     charCount[char] = (charCount[char] || 0) + 1;
+//   }
 
-  let result = "";
-  for (let char of str) {
-    if (charCount[char] === 1) {
-      result += char;
+//   let result = "";
+//   for (let char of str) {
+//     if (charCount[char] === 1) {
+//       result += char;
+//     }
+//   }
+
+//   return result;
+// }
+
+// let input = "pov(2011): India lifts the world cup after 28 years";
+
+function factors(num) {
+  console.log(`\nfactors of ${num}:`);
+
+  for (let i = 1; i <= Math.floor(num / 4); i++) {
+    if (num % i === 0) {
+      let val = Math.floor(num / i);
+      console.log(`${i} * ${val} = ${num}`);
     }
   }
-
-  return result;
 }
 
-let input = "POV(2011): India lifts the world cup after 28 years";
+function number_input() {
+  var pr = prompt("Enter a number: ");
 
+  if (pr === null) {
+    console.log("prompt cancelled!");
+  } else {
+    let num = Number(pr);
+    if (isNaN(num)) {
+      console.log("invalid input");
+    } else {
+      if (num <= 0) {
+        console.log("Please enter a positive natural number");
+      } else {
+        factors(num); // change the function name as needed
+      }
+    }
+  }
+}
 document.getElementById("calculate").addEventListener("click", function () {
-  console.log(uniqueCharacters(input));
+  number_input();
 });
