@@ -256,16 +256,34 @@ switch (day) {
 
 // let input = "pov(2011): India lifts the world cup after 28 years";
 
-function factors(num) {
-  console.log(`\nfactors of ${num}:`);
+// function factors(num) {
+//   console.log(`\nfactors of ${num}:`);
 
-  for (let i = 1; i <= Math.floor(num / 4); i++) {
-    if (num % i === 0) {
-      let val = Math.floor(num / i);
-      console.log(`${i} * ${val} = ${num}`);
-    }
-  }
-}
+//   for (let i = 1; i <= Math.floor(num / 4); i++) {
+//     if (num % i === 0) {
+//       let val = Math.floor(num / i);
+//       console.log(`${i} * ${val} = ${num}`);
+//     }
+//   }
+// }
+
+// function isPrime(num) {
+//   if (num == 1) return false;
+//   if (num == 2) return true;
+//   if (num % 2 == 0) return false;
+//   for (let i = 2; i < num; i++) {
+//     if (num % i == 0) return false;
+//   }
+//   return true;
+// }
+
+// function primeShow(num) {
+//   if (isPrime(num)) {
+//     console.log(`${num} is prime`);
+//   } else {
+//     console.log(`${num} is not prime`);
+//   }
+// }
 
 function number_input() {
   var pr = prompt("Enter a number: ");
@@ -280,11 +298,12 @@ function number_input() {
       if (num <= 0) {
         console.log("Please enter a positive natural number");
       } else {
-        factors(num); // change the function name as needed
+        primeShow(num); // fn ka naam change kar skte h
       }
     }
   }
 }
+
 document.getElementById("calculate").addEventListener("click", function () {
   number_input();
 });
