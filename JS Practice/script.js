@@ -307,3 +307,62 @@ function number_input() {
 document.getElementById("calculate").addEventListener("click", function () {
   number_input();
 });
+
+// Higher order function
+
+function ab() {
+  // console.log("Hey");
+  return function cd() {
+    // console.log("Hello");
+    return function ef() {
+      // console.log("World");
+      return 12;
+    };
+  };
+}
+
+let xy = ab()()();
+
+console.log(xy);
+
+function a() {
+  return function b() {
+    console.log("Hello, This is a returned funstion");
+  };
+}
+
+var ans = a();
+ans();
+
+// passing a function
+function abcd(fn) {
+  // this is a higher order function
+  fn();
+}
+
+abcd(function () {
+  // this is a callback function
+  console.log("Hello, This is a passed function");
+});
+
+let m = 0;
+function m_changer() {
+  // impure function as it changes external state
+  m++;
+  console.log(m);
+}
+m_changer();
+
+function greeting() {
+  // pure function as it doesn't affect outside variables
+  console.log("Namaste");
+}
+greeting();
+
+// global scope
+let global_var = 0;
+
+// local scope
+function local() {
+  let local_var = 0;
+}
