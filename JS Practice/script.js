@@ -267,23 +267,23 @@ switch (day) {
 //   }
 // }
 
-// function isPrime(num) {
-//   if (num == 1) return false;
-//   if (num == 2) return true;
-//   if (num % 2 == 0) return false;
-//   for (let i = 2; i < num; i++) {
-//     if (num % i == 0) return false;
-//   }
-//   return true;
-// }
+function isPrime(num) {
+  if (num == 1) return false;
+  if (num == 2) return true;
+  if (num % 2 == 0) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) return false;
+  }
+  return true;
+}
 
-// function primeShow(num) {
-//   if (isPrime(num)) {
-//     console.log(`${num} is prime`);
-//   } else {
-//     console.log(`${num} is not prime`);
-//   }
-// }
+function primeShow(num) {
+  if (isPrime(num)) {
+    console.log(`${num} is prime`);
+  } else {
+    console.log(`${num} is not prime`);
+  }
+}
 
 function number_input() {
   var pr = prompt("Enter a number: ");
