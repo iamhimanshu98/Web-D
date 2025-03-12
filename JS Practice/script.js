@@ -310,59 +310,82 @@ document.getElementById("calculate").addEventListener("click", function () {
 
 // Higher order function
 
-function ab() {
-  // console.log("Hey");
-  return function cd() {
-    // console.log("Hello");
-    return function ef() {
-      // console.log("World");
-      return 12;
-    };
-  };
-}
+// function ab() {
+//   // console.log("Hey");
+//   return function cd() {
+//     // console.log("Hello");
+//     return function ef() {
+//       // console.log("World");
+//       return 12;
+//     };
+//   };
+// }
 
-let xy = ab()()();
+// let xy = ab()()();
 
-console.log(xy);
+// console.log(xy);
 
-function a() {
-  return function b() {
-    console.log("Hello, This is a returned funstion");
-  };
-}
+// function a() {
+//   return function b() {
+//     console.log("Hello, This is a returned funstion");
+//   };
+// }
 
-var ans = a();
-ans();
+// var ans = a();
+// ans();
 
-// passing a function
-function abcd(fn) {
-  // this is a higher order function
-  fn();
-}
+// // passing a function
+// function abcd(fn) {
+//   // this is a higher order function
+//   fn();
+// }
 
-abcd(function () {
-  // this is a callback function
-  console.log("Hello, This is a passed function");
-});
+// abcd(function () {
+//   // this is a callback function
+//   console.log("Hello, This is a passed function");
+// });
 
-let m = 0;
-function m_changer() {
-  // impure function as it changes external state
-  m++;
-  console.log(m);
-}
-m_changer();
+// let m = 0;
+// function m_changer() {
+//   // impure function as it changes external state
+//   m++;
+//   console.log(m);
+// }
+// m_changer();
 
-function greeting() {
-  // pure function as it doesn't affect outside variables
-  console.log("Namaste");
-}
-greeting();
+// function greeting() {
+//   // pure function as it doesn't affect outside variables
+//   console.log("Namaste");
+// }
+// greeting();
 
-// global scope
-let global_var = 0;
+// // global scope
+// let global_var = 0;
 
-// local scope
-function local() {
-  let local_var = 0;
-}
+// // local scope
+// function local() {
+//   let local_var = 0;
+// }
+
+// closures
+
+// function high() {
+//   let a = 0;
+//   return function low() {onsole.log("Hello, JavaScript");
+
+// console.error("Hello, JavaScript");
+// console.warn("Hello, JavaScript");
+console.log("Hello, JavaScript");
+console.info("Hello, JavaScript");
+
+console.log(100 * 5 + 40 / 2 - 3);
+
+a = null;
+
+console.log(typeof a);
+console.log(typeof "a");
+console.log(null === null);
+console.log(null == null);
+console.log(a === null);
+
+
