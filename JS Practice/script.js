@@ -380,12 +380,94 @@ console.info("Hello, JavaScript");
 
 console.log(100 * 5 + 40 / 2 - 3);
 
-a = null;
+aa = null;
 
-console.log(typeof a);
+console.log(typeof aa);
 console.log(typeof "a");
 console.log(null === null);
 console.log(null == null);
-console.log(a === null);
+console.log(aa === null);
 
+let a = 4;
+let b = 5;
+let c;
+
+c = a; // using third var
+a = b;
+b = c;
+
+console.log(a, b);
+
+[a, b] = [b, a]; // array destructurin
+
+console.log(a, b);
+
+a = a + b; // arithmetic method
+b = a - b;
+a = a - b;
+console.log(a, b);
+
+console.group("Today's topics"); // default behaviour
+console.log("null type");
+console.log("swap methods");
+console.log("grouping in console");
+console.groupEnd();
+
+console.groupCollapsed("Drinks"); // Collapsed behaviour
+console.log("Brandy");
+console.log("Tequilla");
+console.log("Whiskey");
+console.log("Rosé");
+console.groupEnd();
+
+const obj = {
+  namee: "Him",
+  age: 12,
+  city: "Jaipur",
+};
+
+console.log(obj.namee, obj.age);
+
+Object.freeze(obj);
+obj.age = 30; // This will NOT change the age
+obj.city = "New York"; // Cannot add new properties
+delete obj.namee; // Cannot delete properties
+
+console.log(Object.isFrozen(obj)); // true
+
+console.log("after updation", obj);
+
+// converting string to Number
+
+console.log(typeof Number("56"));
+
+console.log(typeof parseInt("56"));
+
+console.log(typeof +"-56");
+
+const str = "JaaaavaScript";
+console.log(str.includes("S"));
+
+console.log(str.indexOf("S")); // throws index of S in str
+console.log(str.indexOf("s")); // throws -1 as s not present in str
+
+console.log(str.indexOf("Script") === -1); // accepts only substring
+console.log(str.search(/a/) === -1); // also accepts RE
+
+let x;
+let y = null;
+
+console.log(x); // undefined
+console.log(y); // null
+console.log(x == y); // true
+console.log(x === y); // false (strict equality)
+
+console.log(null + 10);
+console.log(null - 10);
+console.log(null * 40);
+console.log(null / 10);
+console.log(null >= 10);
+console.log(null <= -10);
+console.log(null === 10);
+console.log(null !== 10);
 
