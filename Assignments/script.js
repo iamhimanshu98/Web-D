@@ -37,10 +37,32 @@ function sequence() {
   }
 }
 
-document.getElementById("run").addEventListener("click", function () {
-  console.log("Second Largest in three numbers:");
-  get();
+function firstCharacter() {
+  let str = "aaaame is Ravi";
 
-  console.log("Missing number in consecutive Sequence:");
-  sequence();
+  for (let i = 0; i < str.length; i++) {
+    let current = str[i];
+    let flag = false;
+    for (let j = 0; j < str.length; j++) {
+      if (current === str[j] && i !== j) {
+        flag = true;
+        break;
+      }
+    }
+    if (!flag) {
+      console.log(current);
+      return;
+    }
+  }
+}
+
+document.getElementById("run").addEventListener("click", function () {
+  // console.log("Second Largest in three numbers:");
+  // get();
+
+  // console.log("Missing number in consecutive Sequence:");
+  // sequence();
+
+  console.log("First non-repeating character in string: ");
+  firstCharacter();
 });
