@@ -1,3 +1,164 @@
+function Q11() {
+  let marks = Number(prompt("Enter marks"));
+
+  if (isNaN(marks) || marks < 0 || marks > 100) {
+    console.log("Invalid marks!");
+    return;
+  }
+
+  if (marks >= 90) {
+    console.log("Grade A");
+  } else if (marks >= 80) {
+    console.log("Grade B");
+  } else if (marks >= 70) {
+    console.log("Grade C");
+  } else if (marks >= 60) {
+    console.log("Grade D");
+  } else {
+    console.log("Grade F");
+  }
+}
+
+document.getElementById("Q11").addEventListener("click", function () {
+  console.log("Grading System:");
+  Q11();
+});
+
+function Q12() {
+  let username = prompt("enter username");
+  let password = prompt("enter password");
+
+  if (username === "him") {
+    if (password === "123") {
+      console.log("Login successful");
+    } else {
+      console.log("Incorrect password");
+    }
+  } else {
+    console.log("Invalid credentials");
+  }
+}
+
+document.getElementById("Q12").addEventListener("click", function () {
+  console.log("Login System:");
+  Q12();
+});
+
+function Q13() {
+  let num1 = Number(prompt("enter 1st number"));
+  let num2 = Number(prompt("enter 2nd number"));
+
+  console.log(num1, num2);
+
+  // num1 = num1 + num2; // 1st approach
+  // num2 = num1 - num2;
+  // num1 = num1 - num2;
+
+  // [num1, num2] = [num2, num1]; // 2nd approach
+
+  num1 = num1 ^ num2; // 3rd approach
+  num2 = num1 ^ num2;
+  num1 = num1 ^ num2;
+
+  console.log(num1, num2);
+}
+
+document.getElementById("Q13").addEventListener("click", function () {
+  Q13();
+});
+
+function Q14() {
+  let num = Number(prompt("enter a number"));
+
+  if (isNaN(num)) {
+    console.log("invalid input");
+    return;
+  }
+
+  if (num % 3 === 0 && num % 5 === 0) {
+    console.log("FizzBuzz");
+  } else {
+    console.log(
+      num % 3 === 0 && num % 5 === 0
+        ? "FizzBuzz"
+        : num % 3 === 0
+        ? "Fizz"
+        : num % 5 === 0
+        ? "Buzz"
+        : num
+    );
+  }
+}
+
+document.getElementById("Q14").addEventListener("click", function () {
+  console.log("FizzBuzz Problem:");
+  Q14();
+});
+
+function Q15() {
+  let str = prompt("enter a number");
+  let rev, num;
+
+  num = Number(str);
+  if (isNaN(num)) {
+    console.log("invalid input");
+    return;
+  }
+
+  rev = Number(str.split("").reverse().join(""));
+
+  console.log("original number: ", num);
+  console.log("reversed number: ", rev);
+}
+
+document.getElementById("Q15").addEventListener("click", function () {
+  console.log("Number Reversal:");
+  Q15();
+});
+
+function Q16() {
+  let num = Number(prompt("enter a number:"));
+  let sum = 0;
+  console.log("original number: ", num);
+
+  while (num > 0) {
+    dig = num % 10;
+    sum += dig;
+    num = Math.floor(num / 10);
+  }
+  console.log("sum of digits: ", sum);
+}
+
+document.getElementById("Q16").addEventListener("click", function () {
+  console.log("Sum of digits of a number:");
+  Q16();
+});
+
+function Q17() {
+  let word = prompt("enter a word:");
+  let rev = "";
+
+  // for (let i = word.length - 1; i >= 0; i--) {
+  //   // 1st approach
+  //   rev += word[i];
+  // }
+
+  rev = word.split("").reverse().join(""); // 2nd approach
+
+  console.log("original word: ", word);
+  console.log("reversed word: ", rev);
+  if (word === rev) {
+    console.log("Palindrome");
+  } else {
+    console.log("Not palindrome");
+  }
+}
+
+document.getElementById("Q17").addEventListener("click", function () {
+  console.log("Palindrome Checker:");
+  Q17();
+});
+
 function Q18() {
   let num = Number(prompt("enter a number"));
   let rev = 0;
@@ -82,7 +243,7 @@ function Q21() {
 }
 
 document.getElementById("Q21").addEventListener("click", function () {
-  console.log("Even Counter: ");
+  console.log("Even digit Counter: ");
   Q21();
 });
 
@@ -122,8 +283,8 @@ function Q23() {
       result += i;
     }
   }
-  console.log(str);
-  console.log(result);
+  console.log("Original String: ", str);
+  console.log("Toggled String: ", result);
 }
 
 document.getElementById("Q23").addEventListener("click", function () {
