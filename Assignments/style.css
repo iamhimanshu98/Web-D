@@ -16,6 +16,7 @@ html {
   font-family: "HelveticaNowDisplay";
   color: #fff;
   background-color: #252528;
+  
 }
 
 main {
@@ -24,8 +25,7 @@ main {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  width: 100vw;
-  height: 100vh;
+  padding: 2rem;
   font-size: 3rem;
 }
 
