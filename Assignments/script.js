@@ -149,3 +149,50 @@ document.getElementById("Q24").addEventListener("click", function () {
   console.log("Missing number in consecutive Sequence:");
   Q24();
 });
+
+function Q25() {
+  let num = Number(prompt("enter a single digit number"));
+
+  if (num === NaN) {
+    console.log("enter valid number!");
+    return;
+  }
+
+  switch (num) {
+    case 1:
+      console.log("One");
+      break;
+    case 2:
+      console.log("Two");
+      break;
+    case 3:
+      console.log("Three");
+      break;
+    case 4:
+      console.log("Four");
+      break;
+    case 5:
+      console.log("Five");
+      break;
+    case 6:
+      console.log("Six");
+      break;
+    case 7:
+      console.log("Seven");
+      break;
+    case 8:
+      console.log("Eight");
+      break;
+    case 9:
+      console.log("Nine");
+      break;
+    default:
+      console.log("Invalid Input");
+      break;
+  }
+}
+
+document.getElementById("Q25").addEventListener("click", function () {
+  console.log("Number to Word:");
+  Q25();
+});
