@@ -1,3 +1,21 @@
+function Q10() {
+  let num = Number(prompt("enter a number"));
+
+  if (isNaN(num)) {
+    console.log("invalid number!");
+    return;
+  }
+
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
+}
+
+document.getElementById("Q10").addEventListener("click", function () {
+  console.log("Multiplication Table:");
+  Q10();
+});
+
 function Q11() {
   let marks = Number(prompt("Enter marks"));
 
