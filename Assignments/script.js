@@ -1,3 +1,34 @@
+let circle = document.querySelector(".circle");
+let flag = true;
+circle.addEventListener("click", function () {
+  if (flag) {
+    circle.style.backgroundColor = "yellow";
+    circle.style.color = "#222";
+    flag = false;
+  } else {
+    circle.style.backgroundColor = "transparent";
+    circle.style.color = "white";
+    flag = true;
+  }
+});
+
+function Q1() {
+  let age = Number(prompt("enter age"));
+
+  if (age < 18) {
+    console.log("you are a minor");
+  } else if (age < 60) {
+    console.log("you are adult");
+  } else {
+    console.log("you are senior citizen");
+  }
+}
+
+document.getElementById("Q1").addEventListener("click", function () {
+  console.log("Age Category message:");
+  Q1();
+});
+
 function Q10() {
   let num = Number(prompt("enter a number"));
 
