@@ -1,32 +1,202 @@
 let circle = document.querySelector(".circle");
-let flag = true;
+
 circle.addEventListener("click", function () {
-  if (flag) {
-    circle.style.backgroundColor = "yellow";
-    circle.style.color = "#222";
-    flag = false;
-  } else {
-    circle.style.backgroundColor = "transparent";
-    circle.style.color = "white";
-    flag = true;
-  }
+  circle.classList.toggle("yellow-bg");
 });
 
 function Q1() {
-  let age = Number(prompt("enter age"));
+  let age = Number(prompt("Enter your age"));
+
+  if (isNaN(age) || age < 0) {
+    console.log("Invalid age entered.");
+    return;
+  }
 
   if (age < 18) {
-    console.log("you are a minor");
+    console.log("You are a minor");
   } else if (age < 60) {
-    console.log("you are adult");
+    console.log("You are an adult");
   } else {
-    console.log("you are senior citizen");
+    console.log("You are a senior citizen");
   }
 }
 
 document.getElementById("Q1").addEventListener("click", function () {
   console.log("Age Category message:");
   Q1();
+});
+
+function Q2() {
+  let num1 = Number(prompt("Enter first number"));
+  let num2 = Number(prompt("Enter second number"));
+
+  if (isNaN(num1) || isNaN(num2)) {
+    console.log("Invalid input.");
+    return;
+  }
+
+  if ((num1 + num2) % 2 == 0) {
+    console.log("Even Sum");
+  } else {
+    console.log("Odd Sum");
+  }
+}
+
+document.getElementById("Q2").addEventListener("click", function () {
+  console.log("Even Odd Sum:");
+  Q2();
+});
+
+function Q3() {
+  let char = prompt("enter a character");
+
+  if (char >= "A" && char <= "Z") {
+    console.log("Uppercase", char);
+  } else if (char >= "a" && char <= "z") {
+    console.log("Lowercase", char);
+  } else {
+    console.log("Not a letter");
+  }
+}
+
+document.getElementById("Q3").addEventListener("click", function () {
+  console.log("Case checker:");
+  Q3();
+});
+
+function Q4() {
+  let num1 = Number(prompt("Enter 1st number"));
+  let num2 = Number(prompt("Enter 2nd number"));
+  let num3 = Number(prompt("Enter 3rd number"));
+
+  if (num1 === num2 && num2 === num3) {
+    console.log("All numbers are equal.");
+  } else if (num1 >= num2 && num1 >= num3) {
+    console.log(num1, "is the largest");
+  } else if (num2 >= num1 && num2 >= num3) {
+    console.log(num2, "is the largest");
+  } else {
+    console.log(num3, "is the largest");
+  }
+}
+
+document.getElementById("Q4").addEventListener("click", function () {
+  console.log("Largest of three numbers: ");
+  Q4();
+});
+
+function Q5() {
+  let year = Number(prompt("Enter a year"));
+
+  if (!Number.isInteger(year) || year < 1000 || year > 9999) {
+    console.log("Invalid Year");
+    return;
+  }
+
+  if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0) {
+    console.log("Leap Year");
+  } else {
+    console.log("Not a Leap Year");
+  }
+}
+
+document.getElementById("Q5").addEventListener("click", function () {
+  console.log("Leap Year Checker: ");
+  Q5();
+});
+
+function Q6() {
+  let num1 = Number(prompt("enter 1st number"));
+  let num2 = Number(prompt("enter 2nd number"));
+  let op = prompt("enter an operator (+, -, *, /)");
+
+  switch (op) {
+    case "+":
+      console.log(`${num1} + ${num2} = ${num1 + num2}`);
+      break;
+    case "-":
+      console.log(`${num1} - ${num2} = ${num1 - num2}`);
+      break;
+    case "*":
+      console.log(`${num1} * ${num2} = ${num1 * num2}`);
+      break;
+    case "/":
+      if (num2 === 0) {
+        console.log("Cannot divide by zero!");
+      } else {
+        console.log(`${num1} / ${num2} = ${num1 / num2}`);
+      }
+      break;
+
+    default:
+      console.log("Invalid Character!");
+      break;
+  }
+}
+
+document.getElementById("Q6").addEventListener("click", function () {
+  console.log("Simple Calculator:");
+  Q6();
+});
+
+function Q7() {
+  let num = Number(prompt("enter number"));
+  if (num > 0) {
+    console.log("positive");
+  } else if (num === 0) {
+    console.log("zero");
+  } else {
+    console.log("negative");
+  }
+}
+
+document.getElementById("Q7").addEventListener("click", function () {
+  console.log("Positive, Negative or Zero: ");
+  Q7();
+});
+
+function Q8() {
+  let name = prompt("Enter your name");
+  let time = Number(prompt("Enter time (24-hour format)"));
+
+  if (isNaN(time) || !Number.isInteger(time) || time < 0 || time >= 24) {
+    console.log("Invalid Time");
+    return;
+  }
+
+  if (time >= 5 && time < 12) {
+    console.log(`Good Morning, ${name}`);
+  } else if (time >= 12 && time < 17) {
+    console.log(`Good Afternoon, ${name}`);
+  } else if (time >= 17 && time < 21) {
+    console.log(`Good Evening, ${name}`);
+  } else {
+    console.log(`Good Night, ${name}`);
+  }
+}
+
+document.getElementById("Q8").addEventListener("click", function () {
+  console.log("User Greeting");
+  Q8();
+});
+
+function Q9() {
+  let color = prompt("Enter traffic light color").toLowerCase();
+
+  if (color === "red") {
+    console.log("Stop!");
+  } else if (color === "yellow") {
+    console.log("Get Ready!");
+  } else if (color === "green") {
+    console.log("Go!");
+  } else {
+    console.log("Invalid color!");
+  }
+}
+
+document.getElementById("Q9").addEventListener("click", function () {
+  console.log("Traffic light system: ");
+  Q9();
 });
 
 function Q10() {
@@ -74,15 +244,13 @@ document.getElementById("Q11").addEventListener("click", function () {
 });
 
 function Q12() {
-  let username = prompt("enter username");
-  let password = prompt("enter password");
+  const users = { him: "123", admin: "admin123" };
 
-  if (username === "him") {
-    if (password === "123") {
-      console.log("Login successful");
-    } else {
-      console.log("Incorrect password");
-    }
+  let username = prompt("Enter username");
+  let password = prompt("Enter password");
+
+  if (users[username] && users[username] === password) {
+    console.log("Login successful");
   } else {
     console.log("Invalid credentials");
   }
@@ -122,10 +290,6 @@ function Q14() {
   if (isNaN(num)) {
     console.log("invalid input");
     return;
-  }
-
-  if (num % 3 === 0 && num % 5 === 0) {
-    console.log("FizzBuzz");
   } else {
     console.log(
       num % 3 === 0 && num % 5 === 0
@@ -230,7 +394,8 @@ function Q19() {
   let num3 = Number(prompt("Enter 3rd number: "));
 
   if (num1 === num2 && num2 === num3) {
-    console.log("Numbers are equal");
+    console.log("All numbers are equal");
+    return;
   }
 
   let largest, secondLargest;
@@ -281,6 +446,8 @@ function Q21() {
   let num = Number(prompt("enter number"));
   let orgNum = num;
   let count = 0;
+  let dig;
+
   while (num > 0) {
     dig = num % 10;
     if (dig % 2 == 0) {
@@ -363,7 +530,7 @@ document.getElementById("Q24").addEventListener("click", function () {
 function Q25() {
   let num = Number(prompt("enter a single digit number"));
 
-  if (num === NaN) {
+  if (isNaN(num)) {
     console.log("enter valid number!");
     return;
   }
