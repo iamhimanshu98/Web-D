@@ -267,46 +267,46 @@ switch (day) {
 //   }
 // }
 
-function isPrime(num) {
-  if (num == 1) return false;
-  if (num == 2) return true;
-  if (num % 2 == 0) return false;
-  for (let i = 2; i < num; i++) {
-    if (num % i == 0) return false;
-  }
-  return true;
-}
+// function isPrime(num) {
+//   if (num == 1) return false;
+//   if (num == 2) return true;
+//   if (num % 2 == 0) return false;
+//   for (let i = 2; i < num; i++) {
+//     if (num % i == 0) return false;
+//   }
+//   return true;
+// }
 
-function primeShow(num) {
-  if (isPrime(num)) {
-    console.log(`${num} is prime`);
-  } else {
-    console.log(`${num} is not prime`);
-  }
-}
+// function primeShow(num) {
+//   if (isPrime(num)) {
+//     console.log(`${num} is prime`);
+//   } else {
+//     console.log(`${num} is not prime`);
+//   }
+// }
 
-function number_input() {
-  var pr = prompt("Enter a number: ");
+// function number_input() {
+//   var pr = prompt("Enter a number: ");
 
-  if (pr === null) {
-    console.log("prompt cancelled!");
-  } else {
-    let num = Number(pr);
-    if (isNaN(num)) {
-      console.log("invalid input");
-    } else {
-      if (num <= 0) {
-        console.log("Please enter a positive natural number");
-      } else {
-        primeShow(num); // fn ka naam change kar skte h
-      }
-    }
-  }
-}
+//   if (pr === null) {
+//     console.log("prompt cancelled!");
+//   } else {
+//     let num = Number(pr);
+//     if (isNaN(num)) {
+//       console.log("invalid input");
+//     } else {
+//       if (num <= 0) {
+//         console.log("Please enter a positive natural number");
+//       } else {
+//         primeShow(num); // fn ka naam change kar skte h
+//       }
+//     }
+//   }
+// }
 
-document.getElementById("calculate").addEventListener("click", function () {
-  number_input();
-});
+// document.getElementById("calculate").addEventListener("click", function () {
+//   number_input();
+// });
 
 // Higher order function
 
@@ -375,99 +375,121 @@ document.getElementById("calculate").addEventListener("click", function () {
 
 // console.error("Hello, JavaScript");
 // console.warn("Hello, JavaScript");
-console.log("Hello, JavaScript");
-console.info("Hello, JavaScript");
+// console.log("Hello, JavaScript");
+// console.info("Hello, JavaScript");
 
-console.log(100 * 5 + 40 / 2 - 3);
+// console.log(100 * 5 + 40 / 2 - 3);
 
-aa = null;
+// aa = null;
 
-console.log(typeof aa);
-console.log(typeof "a");
-console.log(null === null);
-console.log(null == null);
-console.log(aa === null);
+// console.log(typeof aa);
+// console.log(typeof "a");
+// console.log(null === null);
+// console.log(null == null);
+// console.log(aa === null);
 
-let a = 4;
-let b = 5;
-let c;
+// let a = 4;
+// let b = 5;
+// let c;
 
-c = a; // using third var
-a = b;
-b = c;
+// c = a; // using third var
+// a = b;
+// b = c;
 
-console.log(a, b);
+// console.log(a, b);
 
-[a, b] = [b, a]; // array destructurin
+// [a, b] = [b, a]; // array destructurin
 
-console.log(a, b);
+// console.log(a, b);
 
-a = a + b; // arithmetic method
-b = a - b;
-a = a - b;
-console.log(a, b);
+// a = a + b; // arithmetic method
+// b = a - b;
+// a = a - b;
+// console.log(a, b);
 
-console.group("Today's topics"); // default behaviour
-console.log("null type");
-console.log("swap methods");
-console.log("grouping in console");
-console.groupEnd();
+// console.group("Today's topics"); // default behaviour
+// console.log("null type");
+// console.log("swap methods");
+// console.log("grouping in console");
+// console.groupEnd();
 
-console.groupCollapsed("Drinks"); // Collapsed behaviour
-console.log("Brandy");
-console.log("Tequilla");
-console.log("Whiskey");
-console.log("Rosé");
-console.groupEnd();
+// console.groupCollapsed("Drinks"); // Collapsed behaviour
+// console.log("Brandy");
+// console.log("Tequilla");
+// console.log("Whiskey");
+// console.log("Rosé");
+// console.groupEnd();
 
-const obj = {
-  namee: "Him",
-  age: 12,
-  city: "Jaipur",
-};
+// const obj = {
+//   namee: "Him",
+//   age: 12,
+//   city: "Jaipur",
+// };
 
-console.log(obj.namee, obj.age);
+// console.log(obj.namee, obj.age);
 
-Object.freeze(obj);
-obj.age = 30; // This will NOT change the age
-obj.city = "New York"; // Cannot add new properties
-delete obj.namee; // Cannot delete properties
+// Object.freeze(obj);
+// obj.age = 30; // This will NOT change the age
+// obj.city = "New York"; // Cannot add new properties
+// delete obj.namee; // Cannot delete properties
 
-console.log(Object.isFrozen(obj)); // true
+// console.log(Object.isFrozen(obj)); // true
 
-console.log("after updation", obj);
+// console.log("after updation", obj);
 
-// converting string to Number
+// // converting string to Number
 
-console.log(typeof Number("56"));
+// console.log(typeof Number("56"));
 
-console.log(typeof parseInt("56"));
+// console.log(typeof parseInt("56"));
 
-console.log(typeof +"-56");
+// console.log(typeof +"-56");
 
-const str = "JaaaavaScript";
-console.log(str.includes("S"));
+// const str = "JaaaavaScript";
+// console.log(str.includes("S"));
 
-console.log(str.indexOf("S")); // throws index of S in str
-console.log(str.indexOf("s")); // throws -1 as s not present in str
+// console.log(str.indexOf("S")); // throws index of S in str
+// console.log(str.indexOf("s")); // throws -1 as s not present in str
 
-console.log(str.indexOf("Script") === -1); // accepts only substring
-console.log(str.search(/a/) === -1); // also accepts RE
+// console.log(str.indexOf("Script") === -1); // accepts only substring
+// console.log(str.search(/a/) === -1); // also accepts RE
 
-let x;
-let y = null;
+// let x;
+// let y = null;
 
-console.log(x); // undefined
-console.log(y); // null
-console.log(x == y); // true
-console.log(x === y); // false (strict equality)
+// console.log(x); // undefined
+// console.log(y); // null
+// console.log(x == y); // true
+// console.log(x === y); // false (strict equality)
 
-console.log(null + 10);
-console.log(null - 10);
-console.log(null * 40);
-console.log(null / 10);
-console.log(null >= 10);
-console.log(null <= -10);
-console.log(null === 10);
-console.log(null !== 10);
+// console.log(null + 10);
+// console.log(null - 10);
+// console.log(null * 40);
+// console.log(null / 10);
+// console.log(null >= 10);
+// console.log(null <= -10);
+// console.log(null === 10);
+// console.log(null !== 10);
 
+let arr = [1, 4, "Him", "a"];
+
+arr.forEach((value) => {
+  console.log(value);
+});
+
+let arry = arr.map((value) => {
+  return value;
+});
+
+let num = [5, 6, 3, 8, 9];
+
+let numbers = num.filter((n) => {
+  return n > 5;
+});
+
+let red = num.reduce((acc, val) => {
+  return acc + val;
+}, 1);
+
+let ar = [11, 2, 3, 1, 3, 2, 3, 24, 5, 21, 4, 1, 24, 12, 4];
+console.log([...new Set(ar)]);
