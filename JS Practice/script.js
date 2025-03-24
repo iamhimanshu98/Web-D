@@ -492,4 +492,19 @@ let red = num.reduce((acc, val) => {
 }, 1);
 
 let ar = [11, 2, 3, 1, 3, 2, 3, 24, 5, 21, 4, 1, 24, 12, 4];
-console.log([...new Set(ar)]);
+
+let result = [...new Set(ar)].sort((a, b) => b - a);
+
+console.log(result[1]);
+let arr2 = [];
+
+for (let i = result.length - 1; i >= 0; i--) {
+  arr2.push(result[i]);
+}
+
+let obj = {};
+
+ar.forEach((val) => {
+  obj[val] === undefined ? (obj[val] = 1) : obj[val]++;
+});
+
