@@ -6,6 +6,7 @@
 //   console.log();
 // }
 
+// original approach (Himanshu K)
 function col(num) {
   if (num === 0) {
     console.log();
@@ -24,3 +25,14 @@ function row(num) {
 }
 
 row(5);
+
+// different approach by ai
+function print(num) {
+  if (num === 0) return;
+  (function col(n) {
+    n ? (process.stdout.write("* "), col(n - 1)) : console.log();
+  })(num);
+  print(num - 1);
+}
+
+print(5);
